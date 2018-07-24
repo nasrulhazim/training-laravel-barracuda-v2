@@ -21,12 +21,14 @@
 	- [x] Blade Directive `@lang('something')`
 	- [x] Enable on runtime - `app()->setLocale('ms');`
 
-- [ ] Helper
-	- [ ] use tinker 
-	- [ ] snake_case(), str_plural(), view(), response(), request(), redirect()
-	- [ ] custom helpers? hell yeahhhhh!
+- [x] Helper
+	- [x] use tinker 
+	- [x] `snake_case()`, `str_plural()`, `view()`, `response()`, `request()`, `redirect()`
+	- [x] custom helpers? hell yeahhhhh!
 
-- [ ] Session
+- [x] Session
+	- [ ] `session()->get('key');`
+	- [ ] `session()->put('key', 'value');`
 
 - [ ] Response
 	- [ ] json()
