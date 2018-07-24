@@ -4,7 +4,12 @@
 - [ ] Eloquent
 - [ ] Pagination 
 - [ ] Relationships
-- [ ] Lazy Eager Loading (Use Model Or Relationship)
+	- [ ] 1-to-1
+	- [ ] 1-to-many
+	- [ ] many-to-1
+	- [ ] many-to-many
+	- [ ] Polymorph
+- [ ] Lazy & Eager Loading (Use Model Or Relationship)
 
 A user has many invoices
 An invoice has many items

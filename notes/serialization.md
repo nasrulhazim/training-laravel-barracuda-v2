@@ -30,6 +30,12 @@ protected $visible = ['first_name', 'last_name'];
  * @var array
  */
 protected $appends = ['is_admin'];
+
+// $user->is_admin
+public function getIsAdminAttribute()
+{
+	return $this->role()->hasRole('admin');
+}
 ```
 
 ### Temporary Visible / Hide

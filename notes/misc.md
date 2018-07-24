@@ -21,10 +21,11 @@
 - [ ] Response
 	- [ ] json()
 	- [ ] redirect()
+	- [ ] view()
 	- [ ] macros
+		- [ ] response()->api($data, $message, $http_status_code)
 
 - [ ] Session
-	- [ ] rarely use :P
 
 - [ ] Helper
 	- [ ] use tinker 
