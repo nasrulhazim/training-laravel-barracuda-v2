@@ -1,6 +1,8 @@
 ## Eloquent
 
 - [x] Database: Seeding
+	- [x] DevelopmentSeeder
+	- [x] added `php artisan seed:dev` in `routes/console.php`
 - [x] Eloquent
 - [x] Pagination 
 	- [x] Use when query: `\App\Invoice::paginate(config('pagination.length'))`
