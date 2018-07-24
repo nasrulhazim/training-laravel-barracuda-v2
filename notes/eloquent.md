@@ -1,15 +1,15 @@
 ## Eloquent
 
-- [ ] Database: Seeding
-- [ ] Eloquent
+- [x] Database: Seeding
+- [x] Eloquent
 - [ ] Pagination 
 - [ ] Relationships
 	- [ ] 1-to-1
-	- [ ] 1-to-many
-	- [ ] many-to-1
+	- [x] 1-to-many
+	- [x] many-to-1
 	- [ ] many-to-many
 	- [ ] Polymorph
-- [ ] Lazy & Eager Loading (Use Model Or Relationship)
+- [x] Lazy & Eager Loading (Use Model Or Relationship)
 
 A user has many invoices
 An invoice has many items
@@ -21,8 +21,8 @@ User > invoices >> items
 No joins involved when first query
 
 ```php
-$user = \App\Models\User::first();
-$user->invoices...
+$user = \App\User::first();
+$user->invoices;
 ```
 
 ### Eager Loading
@@ -30,6 +30,6 @@ $user->invoices...
 Include joining tables
 
 ```php
-$user = \App\Models\User::with('invoices')->first();
+$user = \App\User::with('invoices', 'invoices.items')->first();
 ```
 
