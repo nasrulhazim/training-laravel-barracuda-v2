@@ -34,8 +34,8 @@
 	- [x] json()
 	- [x] redirect()
 	- [x] view()
-	- [ ] macros
-		- [ ] response()->api($data, $message, $http_status_code)
+	- [x] macros
+		- [x] response()->api($data, $message, $http_status_code)
 
 - [x] Collections
 	- [x] each
