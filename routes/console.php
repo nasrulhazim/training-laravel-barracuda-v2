@@ -16,3 +16,9 @@ use Illuminate\Foundation\Inspiring;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
+
+Artisan::command('seed:dev', function() {
+	$this->call('db:seed', [
+		'--class' => 'DevelopmentSeeder',
+	]);
+})->describe('Seed development data.');
