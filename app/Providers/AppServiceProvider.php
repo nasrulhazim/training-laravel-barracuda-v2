@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Response as HttpResponse;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +14,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        HttpResponse::macro('api', function ($data = null, $message = null, $status = true, $code = 200) {
+            return response()->json([
+                'data'    => $data,
+                'message' => $message,
+                'status'  => $status,
+                'code'    => $code,
+            ], $code);
+        });
     }
 
     /**

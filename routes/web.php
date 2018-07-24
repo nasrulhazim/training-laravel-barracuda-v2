@@ -19,3 +19,22 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/invoices', 'InvoiceController');
+
+Route::get('/api/user', function () {
+	$user = \App\User::first();
+	// return $user;
+	// return response()->json($user);
+	// return response()->json($user->toArray());
+	// return response()->json([
+	// 	'data' => $user,
+	// 	'message' => '',
+	// 	'code' => 200
+	// ]);
+	return response()->api($user);
+});
+
+Route::get('/api/search/{keyword}', function () {
+	$user = \App\User::first();
+	
+	return response()->api($user);
+});

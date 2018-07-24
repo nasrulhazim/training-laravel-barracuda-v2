@@ -27,13 +27,13 @@
 	- [x] custom helpers? hell yeahhhhh!
 
 - [x] Session
-	- [ ] `session()->get('key');`
-	- [ ] `session()->put('key', 'value');`
+	- [x] `session()->get('key');`
+	- [x] `session()->put('key', 'value');`
 
 - [ ] Response
-	- [ ] json()
-	- [ ] redirect()
-	- [ ] view()
+	- [x] json()
+	- [x] redirect()
+	- [x] view()
 	- [ ] macros
 		- [ ] response()->api($data, $message, $http_status_code)
 
