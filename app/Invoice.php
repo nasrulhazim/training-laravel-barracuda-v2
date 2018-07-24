@@ -16,4 +16,15 @@ class Invoice extends Model
     {
     	return $this->hasMany(Item::class);
     }
+
+    // $invoice->total_amount
+	public function getTotalAmountAttribute()
+	{
+		if($this->items()->count() == 0) {
+			return 0;
+		}
+		return $this->items->sum->amount;
+	}
 }
+
+

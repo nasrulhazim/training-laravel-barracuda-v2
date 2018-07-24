@@ -31,4 +31,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Invoice::class);
     }
+
+    // $user->total_invoiced_amount
+    public function getTotalInvoicedAmountAttribute()
+    {
+        if($this->invoices()->count() == 0) {
+            return 0;
+        }
+        
+        return $this->invoices->sum->total_amount;
+    }
 }
