@@ -8,7 +8,9 @@
                 <div class="card-header">Invoices</div>
 
                 <div class="card-body">
-
+					<div class="float-right">
+						{{ $invoices->links() }}
+					</div>
 					<table class="table">
 						<tr>
 							<th>Reference No.</th>

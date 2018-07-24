@@ -2,7 +2,9 @@
 
 - [x] Database: Seeding
 - [x] Eloquent
-- [ ] Pagination 
+- [x] Pagination 
+	- [x] Use when query: `\App\Invoice::paginate(config('pagination.length'))`
+	- [x] Use in view: `$invoices->links()`
 - [ ] Relationships
 	- [ ] 1-to-1
 	- [x] 1-to-many
@@ -16,7 +18,7 @@ An invoice has many items
 
 User > invoices >> items
 
-### Lazy Loady
+### Lazy Loading
 
 No joins involved when first query
 

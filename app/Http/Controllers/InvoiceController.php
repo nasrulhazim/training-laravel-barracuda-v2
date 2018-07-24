@@ -16,7 +16,7 @@ class InvoiceController extends Controller
         $invoices = \App\Invoice::query()
             ->with('items') // using eager load
             ->latest()
-            ->get();
+            ->paginate(config('pagination.length'));
 
         return view('invoices.index', compact('invoices'));
     }
