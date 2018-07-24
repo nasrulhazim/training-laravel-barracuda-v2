@@ -5,12 +5,12 @@
 	- [ ] Frequency
 	- [ ] Using stack
 
-- [ ] Collections
-	- [ ] each
-	- [ ] sum
-	- [ ] higher order
+- [x] Collections
+	- [x] each
+	- [x] sum
+	- [x] higher order
 
-- [ ] Mutators
+- [ ] Mutators & Accessors
 	- [ ] Show accessor benefits, especially involved nested queries
 
 - [ ] Localization
