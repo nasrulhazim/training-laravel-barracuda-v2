@@ -32,6 +32,11 @@ class User extends Authenticatable
         return $this->hasMany(Invoice::class);
     }
 
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = strtoupper($value);
+    }
+
     // $user->total_invoiced_amount
     public function getTotalInvoicedAmountAttribute()
     {

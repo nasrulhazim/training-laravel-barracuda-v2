@@ -23,8 +23,7 @@
 
 - [ ] Helper
 	- [ ] use tinker 
-	- [ ] snake_case, str_plural, 
-	- [ ] show more common usage
+	- [ ] snake_case(), str_plural(), view(), response(), request(), redirect()
 	- [ ] custom helpers? hell yeahhhhh!
 
 - [ ] Session

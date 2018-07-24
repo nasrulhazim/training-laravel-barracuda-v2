@@ -4,7 +4,7 @@ use Faker\Generator as Faker;
 
 $factory->define(\App\Invoice::class, function (Faker $faker) {
     return [
-        'reference' => date('Ymd') . '/' . $faker->unique()->word
+        'reference' => date('Ymd') . '/' . title_case($faker->unique()->word)
     ];
 });
 
