@@ -1,6 +1,6 @@
 ## Middleware
 
-- [ ] Middleware
-	- [ ] Before
-	- [ ] After
-	- [ ] Refer blog: minify html
+- [x] Middleware
+	- [x] Before
+	- [x] After
+	- [x] Refer blog: minify html
