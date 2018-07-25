@@ -30,7 +30,7 @@
 	- [x] `session()->get('key');`
 	- [x] `session()->put('key', 'value');`
 
-- [ ] Response
+- [x] Response
 	- [x] json()
 	- [x] redirect()
 	- [x] view()

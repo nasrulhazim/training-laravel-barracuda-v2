@@ -38,3 +38,5 @@ Route::get('/api/search/{keyword}', function () {
 	
 	return response()->api($user);
 });
+
+Route::view('laravel-mix', 'mix');
