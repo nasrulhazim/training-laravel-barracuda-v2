@@ -40,3 +40,8 @@ Route::get('/api/search/{keyword}', function () {
 });
 
 Route::view('laravel-mix', 'mix');
+
+Route::get(
+	'account/activate/{token}', 
+	'Auth\ActivationController@activate'
+)->name('account.activate');
