@@ -59,3 +59,12 @@ Route::post(
     'account/resend/activation',
     'Auth\ActivationController@resend'
 )->name('account.activation.resend');
+
+Route::view('notifications', 'notifications')->name('notifications');
+
+Route::get('notifications/mark-as-read/{id}', function($id) {
+	auth()->user()->notifications()->where('id', $id)->update([
+		'read_at' => now()
+	]);
+	return redirect()->route('notifications');
+})->name('notifications.mark-as-read');

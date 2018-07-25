@@ -29,7 +29,7 @@ class SendWelcomeNotification extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail', 'database'];
     }
 
     /**
@@ -45,11 +45,6 @@ class SendWelcomeNotification extends Notification
                     ->line('Thank you for using our application!');
     }
 
-    public function toDatabase($notifiable)
-    {
-
-    }
-
     /**
      * Get the array representation of the notification.
      *
@@ -59,7 +54,7 @@ class SendWelcomeNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            //
+            'message' => 'Welcome to ' . config('app.name'),
         ];
     }
 }
