@@ -11,6 +11,7 @@
                     
                 <div class="card-body">
                     <p class="text-primary">Lorem Ipsum</p>
+                    <div id="example"></div>
                 </div>
             </div>
         </div>
