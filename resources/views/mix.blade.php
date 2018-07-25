@@ -11,7 +11,7 @@
                     
                 <div class="card-body">
                     <p class="text-primary">Lorem Ipsum</p>
-                    <div id="example"></div>
+                    <example-component></example-component>
                 </div>
             </div>
         </div>

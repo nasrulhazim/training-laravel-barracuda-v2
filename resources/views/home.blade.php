@@ -17,7 +17,8 @@
                     @endif
 
                     You are logged in!
-                    <div id="example"></div>
+                    <example></example>
+                    <profile></profile>
                 </div>
             </div>
         </div>
