@@ -17,8 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('/invoices', 'InvoiceController');
+Route::get('/home', 'HomeController@index')
+	->middleware('active')
+	->name('home');
+	
+Route::middleware('active', 'auth')
+	->resource('/invoices', 'InvoiceController');
 
 Route::get('/api/user', function () {
 	$user = \App\User::first();
@@ -45,3 +49,13 @@ Route::get(
 	'account/activate/{token}', 
 	'Auth\ActivationController@activate'
 )->name('account.activate');
+
+Route::get(
+    'account/activation/request',
+    'Auth\ActivationController@request'
+)->name('account.activation.request');
+
+Route::post(
+    'account/resend/activation',
+    'Auth\ActivationController@resend'
+)->name('account.activation.resend');

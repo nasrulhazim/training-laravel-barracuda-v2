@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Notifications\SendActivationEmail as ActivationEmail;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
@@ -29,5 +30,29 @@ class ActivationController extends Controller
         } else {
             return 'invalid token provided';
         }
+    }
+
+    public function request()
+    {
+        return view('auth.activation');
+    }
+
+    public function resend()
+    {
+        $this->validate(request(), [
+            'email' => 'required',
+        ]);
+
+        $user = User::where('email', request('email'))->first();
+        $token = str_random(64);
+        $user->activation_token = $token;
+        $user->save();
+
+        // send notification
+        $user->notify(
+            new ActivationEmail($token)
+        );
+
+        return redirect()->route('account.activation.request')->with('notice', 'Please check your email for activation link');
     }
 }
